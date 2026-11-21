@@ -836,8 +836,15 @@
       margin: 0 auto
     }
 
-    .sec-head.center { gap: 18px }
-    .sec-head.center h2 { max-width: 860px; margin-left: auto; margin-right: auto }
+    .sec-head.center {
+      gap: 18px
+    }
+
+    .sec-head.center h2 {
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto
+    }
 
     /* About */
     .about-grid {
@@ -2818,139 +2825,818 @@
         background: linear-gradient(90deg, rgba(18, 16, 14, .6) 0%, rgba(18, 16, 14, .35) 40%, rgba(18, 16, 14, 0) 60%), linear-gradient(180deg, rgba(18, 16, 14, .3), transparent 25%), linear-gradient(0deg, rgba(18, 16, 14, .35), transparent 30%)
       }
     }
-  
+
     /* ===== Motion: parallax & transitions ===== */
-    .scroll-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 100; background: linear-gradient(90deg, var(--gold), var(--gold-2)); transform-origin: 0 50%; transform: scaleX(0); pointer-events: none }
-    [data-parallax], [data-parallax-x] { will-change: transform }
-    @media (min-width:961px) { .h-bg { top: -14%; bottom: -14% } }
-    .glow::before { transform: translate3d(0, var(--py, 0px), 0) }
-    .reveal.from-left:not(.in) { transform: translateX(-70px) }
-    .reveal.from-right:not(.in) { transform: translateX(70px) }
-    .reveal.zoom:not(.in) { transform: translateY(30px) scale(.94) }
-    .t-row.reveal { transition: opacity 1s cubic-bezier(.2,.8,.2,1), transform 1s cubic-bezier(.2,.8,.2,1), background .45s cubic-bezier(.2,.8,.2,1), color .45s, border-color .45s }
-    .panel .t-row.reveal:nth-child(2) { transition-delay: .06s, .06s, 0s, 0s, 0s }
-    .panel .t-row.reveal:nth-child(3) { transition-delay: .12s, .12s, 0s, 0s, 0s }
-    .panel .t-row.reveal:nth-child(4) { transition-delay: .18s, .18s, 0s, 0s, 0s }
-    .panel .t-row.reveal:nth-child(5) { transition-delay: .24s, .24s, 0s, 0s, 0s }
-    .panel .t-row.reveal:nth-child(6) { transition-delay: .3s, .3s, 0s, 0s, 0s }
-    .reveal.in:is(.doc, .step, .v-card, .loc-card):hover { transform: translateY(-6px) }
-    h2.reveal { transition: opacity 1s cubic-bezier(.2,.8,.2,1), transform 1s cubic-bezier(.2,.8,.2,1), filter 1s ease }
-    h2.reveal:not(.in) { filter: blur(6px) }
-    .v-card.reveal .v-thumb img { transform: scale(1.15); transition: transform 1.6s cubic-bezier(.2,.8,.2,1), opacity .8s }
-    .v-card.reveal.in .v-thumb img { transform: scale(1) }
-    .v-card.reveal.in:hover .v-thumb img { transform: scale(1.06) }
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      z-index: 100;
+      background: linear-gradient(90deg, var(--gold), var(--gold-2));
+      transform-origin: 0 50%;
+      transform: scaleX(0);
+      pointer-events: none
+    }
+
+    [data-parallax],
+    [data-parallax-x] {
+      will-change: transform
+    }
+
+    @media (min-width:961px) {
+      .h-bg {
+        top: -14%;
+        bottom: -14%
+      }
+    }
+
+    .glow::before {
+      transform: translate3d(0, var(--py, 0px), 0)
+    }
+
+    .reveal.from-left:not(.in) {
+      transform: translateX(-70px)
+    }
+
+    .reveal.from-right:not(.in) {
+      transform: translateX(70px)
+    }
+
+    .reveal.zoom:not(.in) {
+      transform: translateY(30px) scale(.94)
+    }
+
+    .t-row.reveal {
+      transition: opacity 1s cubic-bezier(.2, .8, .2, 1), transform 1s cubic-bezier(.2, .8, .2, 1), background .45s cubic-bezier(.2, .8, .2, 1), color .45s, border-color .45s
+    }
+
+    .panel .t-row.reveal:nth-child(2) {
+      transition-delay: .06s, .06s, 0s, 0s, 0s
+    }
+
+    .panel .t-row.reveal:nth-child(3) {
+      transition-delay: .12s, .12s, 0s, 0s, 0s
+    }
+
+    .panel .t-row.reveal:nth-child(4) {
+      transition-delay: .18s, .18s, 0s, 0s, 0s
+    }
+
+    .panel .t-row.reveal:nth-child(5) {
+      transition-delay: .24s, .24s, 0s, 0s, 0s
+    }
+
+    .panel .t-row.reveal:nth-child(6) {
+      transition-delay: .3s, .3s, 0s, 0s, 0s
+    }
+
+    .reveal.in:is(.doc, .step, .v-card, .loc-card):hover {
+      transform: translateY(-6px)
+    }
+
+    h2.reveal {
+      transition: opacity 1s cubic-bezier(.2, .8, .2, 1), transform 1s cubic-bezier(.2, .8, .2, 1), filter 1s ease
+    }
+
+    h2.reveal:not(.in) {
+      filter: blur(6px)
+    }
+
+    .v-card.reveal .v-thumb img {
+      transform: scale(1.15);
+      transition: transform 1.6s cubic-bezier(.2, .8, .2, 1), opacity .8s
+    }
+
+    .v-card.reveal.in .v-thumb img {
+      transform: scale(1)
+    }
+
+    .v-card.reveal.in:hover .v-thumb img {
+      transform: scale(1.06)
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      .scroll-progress { display: none }
-      [data-parallax], [data-parallax-x] { transform: none !important }
-      h2.reveal:not(.in) { filter: none }
+      .scroll-progress {
+        display: none
+      }
+
+      [data-parallax],
+      [data-parallax-x] {
+        transform: none !important
+      }
+
+      h2.reveal:not(.in) {
+        filter: none
+      }
     }
-  
+
     /* Journey cards with images */
-    .step { padding: 0 0 30px }
-    .step .top, .step h3, .step p { padding-left: 28px; padding-right: 28px }
-    .step .top { margin: -34px 0 18px; position: relative; z-index: 2; align-items: flex-end }
-    .step::after { z-index: 3 }
-    .step-img { position: relative; height: 190px; overflow: hidden; border-radius: 24px 24px 0 0 }
-    .step-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) sepia(.35) brightness(.78) contrast(1.05); transform: scale(1.04); transition: filter .7s ease, transform 1.2s cubic-bezier(.2,.8,.2,1) }
-    .step-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21,20,19,0) 35%, rgba(27,25,23,.96) 100%) }
-    .step:hover .step-img img { filter: none; transform: scale(1.1) }
-    .step .n { text-shadow: 0 2px 18px rgba(0,0,0,.6) }
-    .step i { background: rgba(21,20,19,.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(205,174,122,.3) }
-    @media (max-width:640px) { .step-img { height: 210px } }
-  
+    .step {
+      padding: 0 0 30px
+    }
+
+    .step .top,
+    .step h3,
+    .step p {
+      padding-left: 28px;
+      padding-right: 28px
+    }
+
+    .step .top {
+      margin: -34px 0 18px;
+      position: relative;
+      z-index: 2;
+      align-items: flex-end
+    }
+
+    .step::after {
+      z-index: 3
+    }
+
+    .step-img {
+      position: relative;
+      height: 190px;
+      overflow: hidden;
+      border-radius: 24px 24px 0 0
+    }
+
+    .step-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1) sepia(.35) brightness(.78) contrast(1.05);
+      transform: scale(1.04);
+      transition: filter .7s ease, transform 1.2s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .step-img::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(21, 20, 19, 0) 35%, rgba(27, 25, 23, .96) 100%)
+    }
+
+    .step:hover .step-img img {
+      filter: none;
+      transform: scale(1.1)
+    }
+
+    .step .n {
+      text-shadow: 0 2px 18px rgba(0, 0, 0, .6)
+    }
+
+    .step i {
+      background: rgba(21, 20, 19, .75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(205, 174, 122, .3)
+    }
+
+    @media (max-width:640px) {
+      .step-img {
+        height: 210px
+      }
+    }
+
     /* About: doctor portrait badge */
-    .about-media .doc-badge { position: absolute; right: -46px; bottom: 34px; width: 210px; height: 210px; border-radius: 50%; overflow: hidden; border: 5px solid var(--ivory); box-shadow: 0 0 0 2px var(--gold), var(--shadow); background: #f3f3f3; z-index: 2 }
-    .about-media .doc-badge img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s cubic-bezier(.2,.8,.2,1) }
-    .about-media .doc-badge:hover img { transform: scale(1.06) }
-    .about-media .tag { z-index: 3 }
-    @media (max-width:640px) {
-      .about-media .doc-badge { width: 120px; height: 120px; right: -4px; bottom: 118px; border-width: 4px }
+    .about-media .doc-badge {
+      position: absolute;
+      right: -46px;
+      bottom: 34px;
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid var(--ivory);
+      box-shadow: 0 0 0 2px var(--gold), var(--shadow);
+      background: #f3f3f3;
+      z-index: 2
     }
-  
+
+    .about-media .doc-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .about-media .doc-badge:hover img {
+      transform: scale(1.06)
+    }
+
+    .about-media .tag {
+      z-index: 3
+    }
+
+    @media (max-width:640px) {
+      .about-media .doc-badge {
+        width: 120px;
+        height: 120px;
+        right: -4px;
+        bottom: 118px;
+        border-width: 4px
+      }
+    }
+
     /* About: doctor portrait only */
-    .about-media .main { background: #f5f8fa }
-    .about-media .main img { object-position: 50% 100% !important }
-  
+    .about-media .main {
+      background: #f5f8fa
+    }
+
+    .about-media .main img {
+      object-position: 50% 100% !important
+    }
+
     /* Smooth scroll (Lenis) */
-    html.lenis, html.lenis body { height: auto }
-    .lenis.lenis-smooth { scroll-behavior: auto !important }
-    .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain }
-    .lenis.lenis-stopped { overflow: hidden }
-  
+    html.lenis,
+    html.lenis body {
+      height: auto
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important
+    }
+
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain
+    }
+
+    .lenis.lenis-stopped {
+      overflow: hidden
+    }
+
     /* ===== Footer (redesign) ===== */
-    footer.ft { background: #12110f; color: rgba(255,255,255,.62); padding: 0; position: relative; overflow: hidden; isolation: isolate }
-    footer.ft::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(205,174,122,.6), transparent) }
-    .ft-glow { position: absolute; width: 900px; height: 900px; left: 50%; top: -520px; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, rgba(176,141,87,.22), transparent 62%); z-index: -1; pointer-events: none }
-    .ft-cta { display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; padding: 80px 0 64px; border-bottom: 1px solid rgba(255,255,255,.08) }
-    .ft-cta .eyebrow { color: var(--gold-2) }
-    .ft-cta h2 { color: var(--ivory); max-width: 640px; margin-top: 14px }
-    .ft-cta h2 em { color: var(--gold-2) }
-    .ft-cta-actions { display: flex; gap: 12px; flex-wrap: wrap }
-    .ft-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr 1.25fr; gap: 48px; padding: 64px 0 48px }
-    .ft-logo { display: inline-flex; background: var(--ivory); border-radius: 22px; padding: 14px 22px; margin-bottom: 22px; box-shadow: 0 0 0 1px rgba(205,174,122,.35), 0 20px 40px -20px rgba(0,0,0,.6); transition: transform .4s }
-    .ft-logo:hover { transform: translateY(-3px) }
-    .ft-logo img { height: 74px; width: auto; mix-blend-mode: multiply }
-    .ft-brand p { font-size: .92rem; max-width: 300px; line-height: 1.7 }
-    footer.ft h4 { font-family: var(--serif); font-size: 1.45rem; font-weight: 500; color: var(--ivory); margin-bottom: 22px; position: relative; padding-bottom: 12px }
-    footer.ft h4::after { content: ""; position: absolute; left: 0; bottom: 0; width: 28px; height: 2px; background: var(--gold) }
-    .ft-col ul { list-style: none; display: grid; gap: 12px; font-size: .92rem }
-    .ft-col ul a { display: inline-flex; align-items: center; gap: 0; transition: color .3s, gap .3s }
-    .ft-col ul a::before { content: ""; width: 0; height: 1px; background: var(--gold-2); transition: width .3s }
-    .ft-col ul a:hover { color: var(--gold-2); gap: 8px }
-    .ft-col ul a:hover::before { width: 14px }
-    .ft-contact a { display: flex; align-items: center; gap: 14px; padding: 8px 0; color: #fff; font-size: .95rem; transition: color .3s }
-    .ft-contact a:hover { color: var(--gold-2) }
-    .ft-contact i { width: 40px; height: 40px; flex: none; border-radius: 50%; background: rgba(205,174,122,.12); border: 1px solid rgba(205,174,122,.25); color: var(--gold-2); display: grid; place-items: center; transition: background .3s, color .3s }
-    .ft-contact a:hover i { background: var(--gold); color: #fff }
-    .ft-contact i svg { width: 16px; height: 16px }
-    .ft-contact small { display: block; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45) }
-    .socials { display: flex; gap: 10px; margin-top: 26px }
-    .socials a { width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,.16); display: grid; place-items: center; transition: .3s; color: #fff }
-    .socials a:hover { background: var(--gold); border-color: var(--gold); transform: translateY(-3px) }
-    .socials svg { width: 17px; height: 17px }
-    .ft-locs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px }
-    .ft-locs a { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border-radius: 18px; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.025); font-size: .85rem; transition: .35s }
-    .ft-locs a:hover { border-color: rgba(205,174,122,.45); background: rgba(255,255,255,.05); transform: translateY(-3px) }
-    .ft-locs i { color: var(--gold-2); flex: none; margin-top: 2px }
-    .ft-locs i svg { width: 18px; height: 18px }
-    .ft-locs b { display: block; color: #fff; font-family: var(--serif); font-size: 1.15rem; font-weight: 500 }
-    .ft-news { margin-top: 14px; display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; padding: 26px 30px; border-radius: 22px; background: linear-gradient(120deg, rgba(176,141,87,.16), rgba(176,141,87,.04)); border: 1px solid rgba(205,174,122,.22) }
-    .ft-news h4 { margin-bottom: 6px !important; padding-bottom: 0 !important }
-    .ft-news h4::after { display: none }
-    .ft-news p { font-size: .9rem }
-    .ft-news .news { display: flex; flex: 1; max-width: 460px; min-width: 260px; border: 1px solid rgba(255,255,255,.18); border-radius: 100px; padding: 5px; background: rgba(0,0,0,.25) }
-    .ft-news .news input { flex: 1; min-width: 0; background: none; border: 0; outline: none; color: #fff; padding: 0 18px; font: inherit; font-size: .92rem }
-    .ft-news .news button { background: var(--gold); color: #fff; border-radius: 100px; padding: 12px 24px; font-weight: 600; font-size: .86rem; transition: background .3s }
-    .ft-news .news button:hover { background: var(--gold-2) }
-    .news-ok { padding: 11px 18px; color: var(--gold-2) }
-    footer.ft .wordmark { font-family: var(--serif); font-style: italic; font-size: clamp(4rem, 15vw, 13rem); line-height: 1.15; text-align: center; white-space: nowrap; margin: 40px 0 0; padding: 0 0 10px; color: transparent; -webkit-text-stroke: 0; background: linear-gradient(180deg, #f1dcb2 0%, #cdae7a 38%, #b08d57 70%, rgba(176,141,87,.55) 100%); -webkit-background-clip: text; background-clip: text; user-select: none; overflow: visible }
-    .ft-bottom { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; padding: 24px 0; border-top: 1px solid rgba(255,255,255,.08); font-size: .82rem }
-    .ft-bottom nav { display: flex; gap: 24px; flex-wrap: wrap }
-    .ft-bottom a:hover { color: var(--gold-2) }
-    .to-top { width: 46px; height: 46px; border-radius: 50%; background: var(--gold); color: #fff; display: grid; place-items: center; transition: .3s }
-    .to-top:hover { background: var(--gold-2); transform: translateY(-3px) }
-    .to-top svg { width: 18px; height: 18px; transform: rotate(-90deg) }
-    footer.ft .disclaimer { font-size: .76rem; opacity: .5; padding-bottom: 28px; max-width: none }
+    footer.ft {
+      background: #12110f;
+      color: rgba(255, 255, 255, .62);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate
+    }
+
+    footer.ft::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(205, 174, 122, .6), transparent)
+    }
+
+    .ft-glow {
+      position: absolute;
+      width: 900px;
+      height: 900px;
+      left: 50%;
+      top: -520px;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(176, 141, 87, .22), transparent 62%);
+      z-index: -1;
+      pointer-events: none
+    }
+
+    .ft-cta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 80px 0 64px;
+      border-bottom: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .ft-cta .eyebrow {
+      color: var(--gold-2)
+    }
+
+    .ft-cta h2 {
+      color: var(--ivory);
+      max-width: 640px;
+      margin-top: 14px
+    }
+
+    .ft-cta h2 em {
+      color: var(--gold-2)
+    }
+
+    .ft-cta-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .ft-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr 1fr 1.25fr;
+      gap: 48px;
+      padding: 64px 0 48px
+    }
+
+    .ft-logo {
+      display: inline-flex;
+      background: var(--ivory);
+      border-radius: 22px;
+      padding: 14px 22px;
+      margin-bottom: 22px;
+      box-shadow: 0 0 0 1px rgba(205, 174, 122, .35), 0 20px 40px -20px rgba(0, 0, 0, .6);
+      transition: transform .4s
+    }
+
+    .ft-logo:hover {
+      transform: translateY(-3px)
+    }
+
+    .ft-logo img {
+      height: 74px;
+      width: auto;
+      mix-blend-mode: multiply
+    }
+
+    .ft-brand p {
+      font-size: .92rem;
+      max-width: 300px;
+      line-height: 1.7
+    }
+
+    footer.ft h4 {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 500;
+      color: var(--ivory);
+      margin-bottom: 22px;
+      position: relative;
+      padding-bottom: 12px
+    }
+
+    footer.ft h4::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 28px;
+      height: 2px;
+      background: var(--gold)
+    }
+
+    .ft-col ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      font-size: .92rem
+    }
+
+    .ft-col ul a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      transition: color .3s, gap .3s
+    }
+
+    .ft-col ul a::before {
+      content: "";
+      width: 0;
+      height: 1px;
+      background: var(--gold-2);
+      transition: width .3s
+    }
+
+    .ft-col ul a:hover {
+      color: var(--gold-2);
+      gap: 8px
+    }
+
+    .ft-col ul a:hover::before {
+      width: 14px
+    }
+
+    .ft-contact a {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 0;
+      color: #fff;
+      font-size: .95rem;
+      transition: color .3s
+    }
+
+    .ft-contact a:hover {
+      color: var(--gold-2)
+    }
+
+    .ft-contact i {
+      width: 40px;
+      height: 40px;
+      flex: none;
+      border-radius: 50%;
+      background: rgba(205, 174, 122, .12);
+      border: 1px solid rgba(205, 174, 122, .25);
+      color: var(--gold-2);
+      display: grid;
+      place-items: center;
+      transition: background .3s, color .3s
+    }
+
+    .ft-contact a:hover i {
+      background: var(--gold);
+      color: #fff
+    }
+
+    .ft-contact i svg {
+      width: 16px;
+      height: 16px
+    }
+
+    .ft-contact small {
+      display: block;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .45)
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 26px
+    }
+
+    .socials a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .16);
+      display: grid;
+      place-items: center;
+      transition: .3s;
+      color: #fff
+    }
+
+    .socials a:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      transform: translateY(-3px)
+    }
+
+    .socials svg {
+      width: 17px;
+      height: 17px
+    }
+
+    .ft-locs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px
+    }
+
+    .ft-locs a {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, .08);
+      background: rgba(255, 255, 255, .025);
+      font-size: .85rem;
+      transition: .35s
+    }
+
+    .ft-locs a:hover {
+      border-color: rgba(205, 174, 122, .45);
+      background: rgba(255, 255, 255, .05);
+      transform: translateY(-3px)
+    }
+
+    .ft-locs i {
+      color: var(--gold-2);
+      flex: none;
+      margin-top: 2px
+    }
+
+    .ft-locs i svg {
+      width: 18px;
+      height: 18px
+    }
+
+    .ft-locs b {
+      display: block;
+      color: #fff;
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500
+    }
+
+    .ft-news {
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 26px 30px;
+      border-radius: 22px;
+      background: linear-gradient(120deg, rgba(176, 141, 87, .16), rgba(176, 141, 87, .04));
+      border: 1px solid rgba(205, 174, 122, .22)
+    }
+
+    .ft-news h4 {
+      margin-bottom: 6px !important;
+      padding-bottom: 0 !important
+    }
+
+    .ft-news h4::after {
+      display: none
+    }
+
+    .ft-news p {
+      font-size: .9rem
+    }
+
+    .ft-news .news {
+      display: flex;
+      flex: 1;
+      max-width: 460px;
+      min-width: 260px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 100px;
+      padding: 5px;
+      background: rgba(0, 0, 0, .25)
+    }
+
+    .ft-news .news input {
+      flex: 1;
+      min-width: 0;
+      background: none;
+      border: 0;
+      outline: none;
+      color: #fff;
+      padding: 0 18px;
+      font: inherit;
+      font-size: .92rem
+    }
+
+    .ft-news .news button {
+      background: var(--gold);
+      color: #fff;
+      border-radius: 100px;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: .86rem;
+      transition: background .3s
+    }
+
+    .ft-news .news button:hover {
+      background: var(--gold-2)
+    }
+
+    .news-ok {
+      padding: 11px 18px;
+      color: var(--gold-2)
+    }
+
+    footer.ft .wordmark {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(4rem, 15vw, 13rem);
+      line-height: 1.15;
+      text-align: center;
+      white-space: nowrap;
+      margin: 40px 0 0;
+      padding: 0 0 10px;
+      color: transparent;
+      -webkit-text-stroke: 0;
+      background: linear-gradient(180deg, #f1dcb2 0%, #cdae7a 38%, #b08d57 70%, rgba(176, 141, 87, .55) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      user-select: none;
+      overflow: visible
+    }
+
+    .ft-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 24px 0;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      font-size: .82rem
+    }
+
+    .ft-bottom nav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap
+    }
+
+    .ft-bottom a:hover {
+      color: var(--gold-2)
+    }
+
+    .to-top {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      transition: .3s
+    }
+
+    .to-top:hover {
+      background: var(--gold-2);
+      transform: translateY(-3px)
+    }
+
+    .to-top svg {
+      width: 18px;
+      height: 18px;
+      transform: rotate(-90deg)
+    }
+
+    footer.ft .disclaimer {
+      font-size: .76rem;
+      opacity: .5;
+      padding-bottom: 28px;
+      max-width: none
+    }
+
     @media (max-width:1100px) {
-      .ft-grid { grid-template-columns: 1fr 1fr; }
+      .ft-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
+
     @media (max-width:960px) {
-      .ft-locs { grid-template-columns: 1fr }
-      .ft-cta { padding: 64px 0 48px }
+      .ft-locs {
+        grid-template-columns: 1fr
+      }
+
+      .ft-cta {
+        padding: 64px 0 48px
+      }
     }
+
     @media (max-width:640px) {
-      .ft-grid { grid-template-columns: 1fr 1fr; gap: 36px 20px; padding: 48px 0 36px }
-      .ft-brand, .ft-contact { grid-column: span 2 }
-      .ft-cta-actions .btn { flex: 1 1 auto; justify-content: center }
-      .ft-news { padding: 22px 18px }
-      .ft-news .news button { padding: 12px 16px }
-      .ft-bottom { flex-direction: column; align-items: flex-start }
-      .to-top { position: absolute; right: 16px; margin-top: -4px }
-      .ft-bottom { position: relative }
+      .ft-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px 20px;
+        padding: 48px 0 36px
+      }
+
+      .ft-brand,
+      .ft-contact {
+        grid-column: span 2
+      }
+
+      .ft-cta-actions .btn {
+        flex: 1 1 auto;
+        justify-content: center
+      }
+
+      .ft-news {
+        padding: 22px 18px
+      }
+
+      .ft-news .news button {
+        padding: 12px 16px
+      }
+
+      .ft-bottom {
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      .to-top {
+        position: absolute;
+        right: 16px;
+        margin-top: -4px
+      }
+
+      .ft-bottom {
+        position: relative
+      }
     }
-  
-    footer.ft .wordmark { filter: drop-shadow(0 0 28px rgba(205,174,122,.28)); margin-top: 56px }
-    footer.ft .ft-locs { margin-bottom: 8px }
+
+    footer.ft .wordmark {
+      filter: drop-shadow(0 0 28px rgba(205, 174, 122, .28));
+      margin-top: 56px
+    }
+
+    footer.ft .ft-locs {
+      margin-bottom: 8px
+    }
+
+    /* First slide: framed doctor portrait */
+    .h-bg img.dr-slide {
+      object-position: 50% 100% !important
+    }
+
+    @media (min-width:961px) {
+      .h-bg img.dr-slide {
+        top: 0;
+        bottom: auto;
+        height: 89%
+      }
+    }
+
+    /* Hero slider nav */
+    .h-nav {
+      position: absolute;
+      right: 40px;
+      bottom: 34px;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px;
+      border-radius: 100px;
+      background: rgba(18, 16, 14, .35);
+      border: 1px solid rgba(255, 255, 255, .18);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px)
+    }
+
+    .h-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .3);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      transition: background .3s, color .3s, border-color .3s, transform .3s
+    }
+
+    .h-btn:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      transform: scale(1.06)
+    }
+
+    .h-btn svg {
+      width: 18px;
+      height: 18px
+    }
+
+    .h-count {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      color: rgba(255, 255, 255, .6)
+    }
+
+    .h-count b {
+      color: #fff;
+      font-weight: 700
+    }
+
+    .h-count i {
+      display: block;
+      width: 64px;
+      height: 2px;
+      background: rgba(255, 255, 255, .22);
+      border-radius: 2px;
+      overflow: hidden
+    }
+
+    .h-count i span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: var(--gold-2)
+    }
+
+    .hero.paused .h-count i span {
+      transition: none !important
+    }
+
+    @media (max-width:960px) {
+      .h-nav {
+        top: 16px;
+        right: 16px;
+        bottom: auto;
+        padding: 6px;
+        gap: 10px
+      }
+
+      .h-btn {
+        width: 40px;
+        height: 40px
+      }
+
+      .h-count i {
+        width: 40px
+      }
+    }
   </style>
 </head>
 
@@ -3145,16 +3831,12 @@
     <section class="hero" id="hero" aria-roledescription="carousel" aria-label="Featured treatments">
       <div class="hero-frame">
         <div class="h-bg" data-parallax="0.28" data-desktop>
-          <img class="active" src="assets/img/slide-1.jpg"
-            alt="Dr. Manoj K. Johar, plastic and cosmetic surgeon in Noida" style="--pos:19%;--mpos:39%">
-          <img class="" src="assets/img/slide-2.jpg" alt="Facial aesthetic treatments" style="--pos:18%;--mpos:38%"
-            loading="lazy">
+          <img class="active" src="assets/img/slide-2.jpg" alt="Natural-looking cosmetic and aesthetic results"
+            style="--pos:18%;--mpos:38%">
           <img class="" src="assets/img/slide-3.jpg" alt="Body contouring and gynaecomastia treatment"
             style="--pos:18%;--mpos:38%" loading="lazy">
           <img class="" src="assets/img/slide-4.jpg" alt="Hair transplant and hair restoration"
             style="--pos:16%;--mpos:37%" loading="lazy">
-          <img class="" src="assets/img/slide-5.jpg" alt="Non-surgical skin treatments and Bridalplasty"
-            style="--pos:18%;--mpos:36%" loading="lazy">
         </div>
         <div class="h-shade"></div>
 
@@ -3163,9 +3845,9 @@
           <div class="h-stack" aria-live="polite">
             <div class="h-slide active" data-ck="Meet the surgeon" data-ct="Dr. Manoj K. Johar"
               data-cs="Principal Director &amp; Group Head" role="group" aria-roledescription="slide"
-              aria-label="1 of 5">
+              aria-label="1 of 3">
               <span class="eyebrow">Plastic, Cosmetic &amp; Reconstructive Surgery</span>
-              <h1>The art of looking like <em>yourself</em>, only more.</h1>
+              <h1>The art of looking like <em>yourself.</em></h1>
               <p class="lead">Led by Dr. Manoj K. Johar, our surgeons combine surgical precision with an artist's eye —
                 natural, confidence-restoring results, from subtle refinements to complex reconstruction.</p>
               <div class="hero-actions">
@@ -3175,22 +3857,8 @@
                 <a href="#about" class="btn btn-light">Meet Dr. Johar</a>
               </div>
             </div>
-            <div class="h-slide" data-ck="Face &amp; Neck" data-ct="Facial Aesthetics"
-              data-cs="Rhinoplasty · Facelift · Fillers" role="group" aria-roledescription="slide" aria-label="2 of 5"
-              aria-hidden="true">
-              <span class="eyebrow">Facial Aesthetics</span>
-              <div class="h-title" role="heading" aria-level="2">Timeless beauty, <em>naturally</em> refined.</div>
-              <p class="lead">Rhinoplasty, facelift, eyelid surgery, Botox and fillers — subtle enhancements that
-                respect and celebrate your unique features.</p>
-              <div class="hero-actions">
-                <a href="#book" class="btn btn-gold">Book a Consultation <svg>
-                    <use href="#i-arrow" />
-                  </svg></a>
-                <a href="#treatments" class="btn btn-light">Face Treatments</a>
-              </div>
-            </div>
             <div class="h-slide" data-ck="Body" data-ct="Body Contouring" data-cs="Liposuction · Gynaecomastia"
-              role="group" aria-roledescription="slide" aria-label="3 of 5" aria-hidden="true">
+              role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true">
               <span class="eyebrow">Body Contouring</span>
               <div class="h-title" role="heading" aria-level="2">Sculpted, defined, <em>unmistakably</em> you.</div>
               <p class="lead">Liposuction, abdominoplasty and gynaecomastia correction to reveal a firmer, more
@@ -3203,7 +3871,7 @@
               </div>
             </div>
             <div class="h-slide" data-ck="Hair" data-ct="Hair Restoration" data-cs="FUE · PRP · Beard &amp; Eyebrow"
-              role="group" aria-roledescription="slide" aria-label="4 of 5" aria-hidden="true">
+              role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true">
               <span class="eyebrow">Hair Transplant &amp; Restoration</span>
               <div class="h-title" role="heading" aria-level="2">Fuller hair. <em>Renewed</em> confidence.</div>
               <p class="lead">Advanced FUE hair transplant, beard and eyebrow restoration and PRP therapy — permanent,
@@ -3215,21 +3883,16 @@
                 <a href="#treatments" class="btn btn-light">Hair Treatments</a>
               </div>
             </div>
-            <div class="h-slide" data-ck="Non-surgical" data-ct="Non-Surgical Care"
-              data-cs="Bridalplasty · Lasers · Peels" role="group" aria-roledescription="slide" aria-label="5 of 5"
-              aria-hidden="true">
-              <span class="eyebrow">Non-Surgical &amp; Bridalplasty</span>
-              <div class="h-title" role="heading" aria-level="2">Glow for the moments that <em>matter.</em></div>
-              <p class="lead">Bridalplasty packages, lasers, peels and skin tightening — refresh your look with minimal
-                downtime, perfectly timed for your big day.</p>
-              <div class="hero-actions">
-                <a href="#book" class="btn btn-gold">Book a Consultation <svg>
-                    <use href="#i-arrow" />
-                  </svg></a>
-                <a href="#treatments" class="btn btn-light">Non-Surgical Options</a>
-              </div>
-            </div>
           </div>
+        </div>
+        <div class="h-nav" aria-label="Slider controls">
+          <button class="h-btn" id="hPrev" aria-label="Previous slide"><svg>
+              <use href="#i-left" />
+            </svg></button>
+          <span class="h-count"><b id="hCur">01</b><i><span id="hBar"></span></i>03</span>
+          <button class="h-btn" id="hNext" aria-label="Next slide"><svg>
+              <use href="#i-arrow" />
+            </svg></button>
         </div>
 
 
@@ -3266,7 +3929,9 @@
       <div class="container about-grid">
         <div class="about-media reveal from-left">
           <div class="frame-line" data-parallax="0.06"></div>
-          <div class="main"><img src="assets/img/dr-johar-portrait.jpg" alt="Dr. Manoj K. Johar, plastic and cosmetic surgeon" loading="lazy" data-parallax="0.08" data-scale="1.1">
+          <div class="main"><img src="assets/img/dr-johar-portrait.jpg"
+              alt="Dr. Manoj K. Johar, plastic and cosmetic surgeon" loading="lazy" data-parallax="0.08"
+              data-scale="1.1">
           </div>
         </div>
         <div class="about-copy">
@@ -3563,7 +4228,8 @@
         </div>
         <div class="steps">
           <div class="step reveal">
-            <div class="step-img"><img src="assets/img/breast-reconstruction-img.jpg" alt="Doctor consulting with patients" loading="lazy" style="object-position:50% 0;height:122%"></div>
+            <div class="step-img"><img src="assets/img/breast-reconstruction-img.jpg"
+                alt="Doctor consulting with patients" loading="lazy" style="object-position:50% 0;height:122%"></div>
             <div class="top"><span class="n">01</span><i><svg>
                   <use href="#i-video" />
                 </svg></i></div>
@@ -3571,7 +4237,8 @@
             <p>Share your goals in an unhurried, private consultation — at the clinic or online.</p>
           </div>
           <div class="step reveal d1">
-            <div class="step-img"><img src="assets/img/serv-cosmetic-medicine-new.jpg" alt="Treatment planning with facial markings" loading="lazy" style="object-position:50% 30%"></div>
+            <div class="step-img"><img src="assets/img/serv-cosmetic-medicine-new.jpg"
+                alt="Treatment planning with facial markings" loading="lazy" style="object-position:50% 30%"></div>
             <div class="top"><span class="n">02</span><i><svg>
                   <use href="#i-recon" />
                 </svg></i></div>
@@ -3579,7 +4246,8 @@
             <p>Receive a tailored plan with clear expectations, timelines and costs.</p>
           </div>
           <div class="step reveal d2">
-            <div class="step-img"><img src="assets/img/serv-surgical-treatments-new.jpg" alt="Surgical team in the operating theatre" loading="lazy" style="object-position:50% 40%"></div>
+            <div class="step-img"><img src="assets/img/serv-surgical-treatments-new.jpg"
+                alt="Surgical team in the operating theatre" loading="lazy" style="object-position:50% 40%"></div>
             <div class="top"><span class="n">03</span><i><svg>
                   <use href="#i-hospital" />
                 </svg></i></div>
@@ -3587,7 +4255,8 @@
             <p>Your treatment is performed with care at an accredited Max Hospital.</p>
           </div>
           <div class="step reveal d3">
-            <div class="step-img"><img src="assets/img/serv-preventive-aesthetics-updated.jpg" alt="Happy, confident couple after recovery" loading="lazy" style="object-position:50% 25%"></div>
+            <div class="step-img"><img src="assets/img/serv-preventive-aesthetics-updated.jpg"
+                alt="Happy, confident couple after recovery" loading="lazy" style="object-position:50% 25%"></div>
             <div class="top"><span class="n">04</span><i><svg>
                   <use href="#i-heart" />
                 </svg></i></div>
@@ -4006,20 +4675,38 @@
           <h2>Ready to look and feel like <em>your best self?</em></h2>
         </div>
         <div class="ft-cta-actions">
-          <a href="#book" class="btn btn-gold">Book a Consultation <svg><use href="#i-arrow" /></svg></a>
-          <a href="https://api.whatsapp.com/send?phone=918527778462" target="_blank" rel="noopener" class="btn btn-light"><svg><use href="#i-wa" /></svg> WhatsApp Us</a>
+          <a href="#book" class="btn btn-gold">Book a Consultation <svg>
+              <use href="#i-arrow" />
+            </svg></a>
+          <a href="https://api.whatsapp.com/send?phone=918527778462" target="_blank" rel="noopener"
+            class="btn btn-light"><svg>
+              <use href="#i-wa" />
+            </svg> WhatsApp Us</a>
         </div>
       </div>
 
       <div class="ft-grid">
         <div class="ft-brand">
-          <a href="#" class="ft-logo" aria-label="Dr. Johar's Plastic Surgery Group – back to top"><img src="assets/img/dr-johar-logo-img.png" alt="Dr. Johar's Plastic Surgery Group"></a>
-          <p>Cosmetic, reconstructive and non-surgical aesthetic care led by Dr. Manoj K. Johar at Max Hospitals across Delhi NCR.</p>
+          <a href="#" class="ft-logo" aria-label="Dr. Johar's Plastic Surgery Group – back to top"><img
+              src="assets/img/dr-johar-logo-img.png" alt="Dr. Johar's Plastic Surgery Group"></a>
+          <p>Cosmetic, reconstructive and non-surgical aesthetic care led by Dr. Manoj K. Johar at Max Hospitals across
+            Delhi NCR.</p>
           <div class="socials">
-            <a href="https://www.instagram.com/drjoharsplasticsurgerygroup/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig" /></svg></a>
-            <a href="https://www.facebook.com/Dr-Johars-Plastic-Surgery-Group-101799121947317/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb" /></svg></a>
-            <a href="https://twitter.com/DrManojJohar" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg><use href="#i-x" /></svg></a>
-            <a href="https://www.youtube.com/channel/UCtuUKKIBk3TVPdZB5t1YzPA" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-yt" /></svg></a>
+            <a href="https://www.instagram.com/drjoharsplasticsurgerygroup/" target="_blank" rel="noopener"
+              aria-label="Instagram"><svg>
+                <use href="#i-ig" />
+              </svg></a>
+            <a href="https://www.facebook.com/Dr-Johars-Plastic-Surgery-Group-101799121947317/" target="_blank"
+              rel="noopener" aria-label="Facebook"><svg>
+                <use href="#i-fb" />
+              </svg></a>
+            <a href="https://twitter.com/DrManojJohar" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg>
+                <use href="#i-x" />
+              </svg></a>
+            <a href="https://www.youtube.com/channel/UCtuUKKIBk3TVPdZB5t1YzPA" target="_blank" rel="noopener"
+              aria-label="YouTube"><svg>
+                <use href="#i-yt" />
+              </svg></a>
           </div>
         </div>
 
@@ -4048,27 +4735,47 @@
 
         <div class="ft-col ft-contact">
           <h4>Get in Touch</h4>
-          <a href="tel:+918527778462"><i><svg><use href="#i-phone" /></svg></i><span><small>Call us</small>+91 85277 78462</span></a>
-          <a href="tel:+918860444888"><i><svg><use href="#i-phone" /></svg></i><span><small>Alternate</small>+91 88604 44888</span></a>
-          <a href="https://api.whatsapp.com/send?phone=918527778462" target="_blank" rel="noopener"><i><svg><use href="#i-wa" /></svg></i><span><small>WhatsApp</small>Chat with our team</span></a>
-          <a href="#book"><i><svg><use href="#i-video" /></svg></i><span><small>Online</small>Virtual Consultation</span></a>
+          <a href="tel:+918527778462"><i><svg>
+                <use href="#i-phone" />
+              </svg></i><span><small>Call us</small>+91 85277 78462</span></a>
+          <a href="tel:+918860444888"><i><svg>
+                <use href="#i-phone" />
+              </svg></i><span><small>Alternate</small>+91 88604 44888</span></a>
+          <a href="https://api.whatsapp.com/send?phone=918527778462" target="_blank" rel="noopener"><i><svg>
+                <use href="#i-wa" />
+              </svg></i><span><small>WhatsApp</small>Chat with our team</span></a>
+          <a href="#book"><i><svg>
+                <use href="#i-video" />
+              </svg></i><span><small>Online</small>Virtual Consultation</span></a>
         </div>
       </div>
 
       <div class="ft-locs">
-        <a href="https://maps.app.goo.gl/YP2hzaQBQLXAqaZV6" target="_blank" rel="noopener"><i><svg><use href="#i-pin" /></svg></i><span><b>Noida</b>Max Multi Speciality Hospital, Sector 19</span></a>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Max+Super+Speciality+Hospital+Patparganj" target="_blank" rel="noopener"><i><svg><use href="#i-pin" /></svg></i><span><b>East Delhi</b>Max Super Speciality Hospital, Patparganj</span></a>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Max+Super+Speciality+Hospital+Vaishali" target="_blank" rel="noopener"><i><svg><use href="#i-pin" /></svg></i><span><b>Ghaziabad</b>Max Super Speciality Hospital, Vaishali</span></a>
+        <a href="https://maps.app.goo.gl/YP2hzaQBQLXAqaZV6" target="_blank" rel="noopener"><i><svg>
+              <use href="#i-pin" />
+            </svg></i><span><b>Noida</b>Max Multi Speciality Hospital, Sector 19</span></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Max+Super+Speciality+Hospital+Patparganj"
+          target="_blank" rel="noopener"><i><svg>
+              <use href="#i-pin" />
+            </svg></i><span><b>East Delhi</b>Max Super Speciality Hospital, Patparganj</span></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Max+Super+Speciality+Hospital+Vaishali"
+          target="_blank" rel="noopener"><i><svg>
+              <use href="#i-pin" />
+            </svg></i><span><b>Ghaziabad</b>Max Super Speciality Hospital, Vaishali</span></a>
       </div>
 
       <div class="wordmark" aria-hidden="true" data-parallax-x="0.25">Dr. Johar's</div>
 
       <div class="ft-bottom">
         <span>© <span id="yr"></span> Dr. Johar's Plastic Surgery Group. All rights reserved.</span>
-        <nav><a href="#">Disclaimer</a><a href="#">Privacy Policy</a><a href="#">Sitemap</a><a href="#">Careers</a></nav>
-        <a href="#" class="to-top" aria-label="Back to top"><svg><use href="#i-arrow" /></svg></a>
+        <nav><a href="#">Disclaimer</a><a href="#">Privacy Policy</a><a href="#">Sitemap</a><a href="#">Careers</a>
+        </nav>
+        <a href="#" class="to-top" aria-label="Back to top"><svg>
+            <use href="#i-arrow" />
+          </svg></a>
       </div>
-      <p class="disclaimer">Results vary from person to person. The information on this website is for general awareness and is not a substitute for a medical consultation.</p>
+      <p class="disclaimer">Results vary from person to person. The information on this website is for general awareness
+        and is not a substitute for a medical consultation.</p>
     </div>
   </footer>
 
@@ -4089,8 +4796,15 @@
           frame = hero.querySelector('.hero-frame'),
           slides = hero.querySelectorAll('.h-slide'),
           imgs = hero.querySelectorAll('.h-bg img'),
-          cur = 0, n = slides.length, paused = false;
+          curEl = document.getElementById('hCur'),
+          bar = document.getElementById('hBar'),
+          cur = 0, n = slides.length, paused = false, timer = null, DELAY = 6500;
         requestAnimationFrame(function () { requestAnimationFrame(function () { hero.classList.add('ready') }) });
+        function pad(i) { return (i < 9 ? '0' : '') + (i + 1) }
+        function restartBar() {
+          bar.style.transition = 'none'; bar.style.width = '0%'; void bar.offsetWidth;
+          bar.style.transition = 'width ' + DELAY + 'ms linear'; bar.style.width = '100%';
+        }
         function show(i) {
           i = (i + n) % n; if (i === cur) return;
           slides[cur].classList.remove('active'); imgs[cur].classList.remove('active');
@@ -4098,17 +4812,25 @@
           cur = i;
           slides[cur].classList.add('active'); imgs[cur].classList.add('active');
           slides[cur].removeAttribute('aria-hidden');
+          curEl.textContent = pad(cur);
+          restart();
         }
-        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches)
-          setInterval(function () { if (!paused && !document.hidden) show(cur + 1) }, 6500);
-        frame.addEventListener('mouseenter', function () { paused = true });
-        frame.addEventListener('mouseleave', function () { paused = false });
-        frame.addEventListener('focusin', function () { paused = true });
-        frame.addEventListener('focusout', function () { paused = false });
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function restart() {
+          clearInterval(timer);
+          if (reduce) return;
+          restartBar();
+          timer = setInterval(function () { if (!paused && !document.hidden) show(cur + 1) }, DELAY);
+        }
+        document.getElementById('hPrev').addEventListener('click', function () { show(cur - 1) });
+        document.getElementById('hNext').addEventListener('click', function () { show(cur + 1) });
+        frame.addEventListener('mouseenter', function () { paused = true; hero.classList.add('paused') });
+        frame.addEventListener('mouseleave', function () { paused = false; hero.classList.remove('paused'); restart() });
         // Swipe on touch devices
         var x0 = null;
         frame.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX }, { passive: true });
         frame.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(dx < 0 ? cur + 1 : cur - 1); x0 = null });
+        restart();
       })();
 
       // Mobile menu
