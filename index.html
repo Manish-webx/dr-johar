@@ -2876,6 +2876,81 @@
     .lenis.lenis-smooth { scroll-behavior: auto !important }
     .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain }
     .lenis.lenis-stopped { overflow: hidden }
+  
+    /* ===== Footer (redesign) ===== */
+    footer.ft { background: #12110f; color: rgba(255,255,255,.62); padding: 0; position: relative; overflow: hidden; isolation: isolate }
+    footer.ft::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(205,174,122,.6), transparent) }
+    .ft-glow { position: absolute; width: 900px; height: 900px; left: 50%; top: -520px; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, rgba(176,141,87,.22), transparent 62%); z-index: -1; pointer-events: none }
+    .ft-cta { display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; padding: 80px 0 64px; border-bottom: 1px solid rgba(255,255,255,.08) }
+    .ft-cta .eyebrow { color: var(--gold-2) }
+    .ft-cta h2 { color: var(--ivory); max-width: 640px; margin-top: 14px }
+    .ft-cta h2 em { color: var(--gold-2) }
+    .ft-cta-actions { display: flex; gap: 12px; flex-wrap: wrap }
+    .ft-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr 1.25fr; gap: 48px; padding: 64px 0 48px }
+    .ft-logo { display: inline-flex; background: var(--ivory); border-radius: 22px; padding: 14px 22px; margin-bottom: 22px; box-shadow: 0 0 0 1px rgba(205,174,122,.35), 0 20px 40px -20px rgba(0,0,0,.6); transition: transform .4s }
+    .ft-logo:hover { transform: translateY(-3px) }
+    .ft-logo img { height: 74px; width: auto; mix-blend-mode: multiply }
+    .ft-brand p { font-size: .92rem; max-width: 300px; line-height: 1.7 }
+    footer.ft h4 { font-family: var(--serif); font-size: 1.45rem; font-weight: 500; color: var(--ivory); margin-bottom: 22px; position: relative; padding-bottom: 12px }
+    footer.ft h4::after { content: ""; position: absolute; left: 0; bottom: 0; width: 28px; height: 2px; background: var(--gold) }
+    .ft-col ul { list-style: none; display: grid; gap: 12px; font-size: .92rem }
+    .ft-col ul a { display: inline-flex; align-items: center; gap: 0; transition: color .3s, gap .3s }
+    .ft-col ul a::before { content: ""; width: 0; height: 1px; background: var(--gold-2); transition: width .3s }
+    .ft-col ul a:hover { color: var(--gold-2); gap: 8px }
+    .ft-col ul a:hover::before { width: 14px }
+    .ft-contact a { display: flex; align-items: center; gap: 14px; padding: 8px 0; color: #fff; font-size: .95rem; transition: color .3s }
+    .ft-contact a:hover { color: var(--gold-2) }
+    .ft-contact i { width: 40px; height: 40px; flex: none; border-radius: 50%; background: rgba(205,174,122,.12); border: 1px solid rgba(205,174,122,.25); color: var(--gold-2); display: grid; place-items: center; transition: background .3s, color .3s }
+    .ft-contact a:hover i { background: var(--gold); color: #fff }
+    .ft-contact i svg { width: 16px; height: 16px }
+    .ft-contact small { display: block; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45) }
+    .socials { display: flex; gap: 10px; margin-top: 26px }
+    .socials a { width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,.16); display: grid; place-items: center; transition: .3s; color: #fff }
+    .socials a:hover { background: var(--gold); border-color: var(--gold); transform: translateY(-3px) }
+    .socials svg { width: 17px; height: 17px }
+    .ft-locs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px }
+    .ft-locs a { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border-radius: 18px; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.025); font-size: .85rem; transition: .35s }
+    .ft-locs a:hover { border-color: rgba(205,174,122,.45); background: rgba(255,255,255,.05); transform: translateY(-3px) }
+    .ft-locs i { color: var(--gold-2); flex: none; margin-top: 2px }
+    .ft-locs i svg { width: 18px; height: 18px }
+    .ft-locs b { display: block; color: #fff; font-family: var(--serif); font-size: 1.15rem; font-weight: 500 }
+    .ft-news { margin-top: 14px; display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; padding: 26px 30px; border-radius: 22px; background: linear-gradient(120deg, rgba(176,141,87,.16), rgba(176,141,87,.04)); border: 1px solid rgba(205,174,122,.22) }
+    .ft-news h4 { margin-bottom: 6px !important; padding-bottom: 0 !important }
+    .ft-news h4::after { display: none }
+    .ft-news p { font-size: .9rem }
+    .ft-news .news { display: flex; flex: 1; max-width: 460px; min-width: 260px; border: 1px solid rgba(255,255,255,.18); border-radius: 100px; padding: 5px; background: rgba(0,0,0,.25) }
+    .ft-news .news input { flex: 1; min-width: 0; background: none; border: 0; outline: none; color: #fff; padding: 0 18px; font: inherit; font-size: .92rem }
+    .ft-news .news button { background: var(--gold); color: #fff; border-radius: 100px; padding: 12px 24px; font-weight: 600; font-size: .86rem; transition: background .3s }
+    .ft-news .news button:hover { background: var(--gold-2) }
+    .news-ok { padding: 11px 18px; color: var(--gold-2) }
+    footer.ft .wordmark { font-family: var(--serif); font-style: italic; font-size: clamp(4rem, 15vw, 13rem); line-height: 1.15; text-align: center; white-space: nowrap; margin: 40px 0 0; padding: 0 0 10px; color: transparent; -webkit-text-stroke: 0; background: linear-gradient(180deg, #f1dcb2 0%, #cdae7a 38%, #b08d57 70%, rgba(176,141,87,.55) 100%); -webkit-background-clip: text; background-clip: text; user-select: none; overflow: visible }
+    .ft-bottom { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; padding: 24px 0; border-top: 1px solid rgba(255,255,255,.08); font-size: .82rem }
+    .ft-bottom nav { display: flex; gap: 24px; flex-wrap: wrap }
+    .ft-bottom a:hover { color: var(--gold-2) }
+    .to-top { width: 46px; height: 46px; border-radius: 50%; background: var(--gold); color: #fff; display: grid; place-items: center; transition: .3s }
+    .to-top:hover { background: var(--gold-2); transform: translateY(-3px) }
+    .to-top svg { width: 18px; height: 18px; transform: rotate(-90deg) }
+    footer.ft .disclaimer { font-size: .76rem; opacity: .5; padding-bottom: 28px; max-width: none }
+    @media (max-width:1100px) {
+      .ft-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width:960px) {
+      .ft-locs { grid-template-columns: 1fr }
+      .ft-cta { padding: 64px 0 48px }
+    }
+    @media (max-width:640px) {
+      .ft-grid { grid-template-columns: 1fr 1fr; gap: 36px 20px; padding: 48px 0 36px }
+      .ft-brand, .ft-contact { grid-column: span 2 }
+      .ft-cta-actions .btn { flex: 1 1 auto; justify-content: center }
+      .ft-news { padding: 22px 18px }
+      .ft-news .news button { padding: 12px 16px }
+      .ft-bottom { flex-direction: column; align-items: flex-start }
+      .to-top { position: absolute; right: 16px; margin-top: -4px }
+      .ft-bottom { position: relative }
+    }
+  
+    footer.ft .wordmark { filter: drop-shadow(0 0 28px rgba(205,174,122,.28)); margin-top: 56px }
+    footer.ft .ft-locs { margin-bottom: 8px }
   </style>
 </head>
 
@@ -3921,80 +3996,79 @@
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer class="ft">
+    <div class="ft-glow" aria-hidden="true"></div>
     <div class="container">
-      <div class="f-cta">
-        <h2>Ready to look and feel like <em>your best self?</em></h2>
+
+      <div class="ft-cta reveal">
         <div>
-          <a href="#book" class="btn btn-gold">Book a Consultation <svg>
-              <use href="#i-arrow" />
-            </svg></a>
-          <a href="https://api.whatsapp.com/send?phone=918527778462" target="_blank" rel="noopener"
-            class="btn btn-light">WhatsApp Us</a>
+          <span class="eyebrow">Your transformation starts here</span>
+          <h2>Ready to look and feel like <em>your best self?</em></h2>
+        </div>
+        <div class="ft-cta-actions">
+          <a href="#book" class="btn btn-gold">Book a Consultation <svg><use href="#i-arrow" /></svg></a>
+          <a href="https://api.whatsapp.com/send?phone=918527778462" target="_blank" rel="noopener" class="btn btn-light"><svg><use href="#i-wa" /></svg> WhatsApp Us</a>
         </div>
       </div>
-      <div class="f-grid">
-        <div class="f-brand">
-          <img src="assets/img/dr-johar-logo-img.png" alt="Dr. Johar's Plastic Surgery Group">
-          <p>Cosmetic, reconstructive and non-surgical aesthetic care led by Dr. Manoj K. Johar at Max Hospitals across
-            Delhi NCR.</p>
+
+      <div class="ft-grid">
+        <div class="ft-brand">
+          <a href="#" class="ft-logo" aria-label="Dr. Johar's Plastic Surgery Group – back to top"><img src="assets/img/dr-johar-logo-img.png" alt="Dr. Johar's Plastic Surgery Group"></a>
+          <p>Cosmetic, reconstructive and non-surgical aesthetic care led by Dr. Manoj K. Johar at Max Hospitals across Delhi NCR.</p>
           <div class="socials">
-            <a href="https://www.instagram.com/drjoharsplasticsurgerygroup/" target="_blank" rel="noopener"
-              aria-label="Instagram"><svg>
-                <use href="#i-ig" />
-              </svg></a>
-            <a href="https://www.facebook.com/Dr-Johars-Plastic-Surgery-Group-101799121947317/" target="_blank"
-              rel="noopener" aria-label="Facebook"><svg>
-                <use href="#i-fb" />
-              </svg></a>
-            <a href="https://twitter.com/DrManojJohar" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg>
-                <use href="#i-x" />
-              </svg></a>
-            <a href="https://www.youtube.com/channel/UCtuUKKIBk3TVPdZB5t1YzPA" target="_blank" rel="noopener"
-              aria-label="YouTube"><svg>
-                <use href="#i-yt" />
-              </svg></a>
+            <a href="https://www.instagram.com/drjoharsplasticsurgerygroup/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig" /></svg></a>
+            <a href="https://www.facebook.com/Dr-Johars-Plastic-Surgery-Group-101799121947317/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb" /></svg></a>
+            <a href="https://twitter.com/DrManojJohar" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg><use href="#i-x" /></svg></a>
+            <a href="https://www.youtube.com/channel/UCtuUKKIBk3TVPdZB5t1YzPA" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-yt" /></svg></a>
           </div>
         </div>
-        <div>
+
+        <div class="ft-col">
           <h4>Treatments</h4>
           <ul>
             <li><a href="#treatments">Cosmetic Surgery</a></li>
             <li><a href="#treatments">Reconstructive Surgery</a></li>
             <li><a href="#treatments">Breast Surgery</a></li>
-            <li><a href="#treatments">Non-Surgical</a></li>
+            <li><a href="#treatments">Body Contouring</a></li>
             <li><a href="#treatments">Hair Restoration</a></li>
+            <li><a href="#treatments">Non-Surgical</a></li>
           </ul>
         </div>
-        <div>
+
+        <div class="ft-col">
           <h4>Patient Guide</h4>
           <ul>
+            <li><a href="#about">About Dr. Johar</a></li>
+            <li><a href="#team">Our Team</a></li>
             <li><a href="#faq">Your First Visit</a></li>
             <li><a href="#faq">FAQs</a></li>
             <li><a href="#stories">Video Stories</a></li>
-            <li><a href="#book">Virtual Consultation</a></li>
-            <li><a href="#locations">Locations</a></li>
           </ul>
         </div>
-        <div>
-          <h4>Stay updated</h4>
-          <p style="font-size:.9rem;margin-bottom:16px">News, events and research in plastic surgery — straight to your
-            inbox.</p>
-          <form class="news"
-            onsubmit="event.preventDefault();this.innerHTML='<span style=\'padding:10px 16px;color:#CDAE7A\'>Thank you for subscribing!</span>'">
-            <input type="email" required placeholder="Your email" aria-label="Email address">
-            <button type="submit">Subscribe</button>
-          </form>
+
+        <div class="ft-col ft-contact">
+          <h4>Get in Touch</h4>
+          <a href="tel:+918527778462"><i><svg><use href="#i-phone" /></svg></i><span><small>Call us</small>+91 85277 78462</span></a>
+          <a href="tel:+918860444888"><i><svg><use href="#i-phone" /></svg></i><span><small>Alternate</small>+91 88604 44888</span></a>
+          <a href="https://api.whatsapp.com/send?phone=918527778462" target="_blank" rel="noopener"><i><svg><use href="#i-wa" /></svg></i><span><small>WhatsApp</small>Chat with our team</span></a>
+          <a href="#book"><i><svg><use href="#i-video" /></svg></i><span><small>Online</small>Virtual Consultation</span></a>
         </div>
       </div>
-      <div class="f-bottom">
-        <span>© <span id="yr"></span> Dr. Johar's Plastic Surgery Group. All rights reserved.</span>
-        <nav><a href="#">Disclaimer</a><a href="#">Privacy Policy</a><a href="#">Sitemap</a><a href="#">Careers</a>
-        </nav>
+
+      <div class="ft-locs">
+        <a href="https://maps.app.goo.gl/YP2hzaQBQLXAqaZV6" target="_blank" rel="noopener"><i><svg><use href="#i-pin" /></svg></i><span><b>Noida</b>Max Multi Speciality Hospital, Sector 19</span></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Max+Super+Speciality+Hospital+Patparganj" target="_blank" rel="noopener"><i><svg><use href="#i-pin" /></svg></i><span><b>East Delhi</b>Max Super Speciality Hospital, Patparganj</span></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Max+Super+Speciality+Hospital+Vaishali" target="_blank" rel="noopener"><i><svg><use href="#i-pin" /></svg></i><span><b>Ghaziabad</b>Max Super Speciality Hospital, Vaishali</span></a>
       </div>
-      <p class="disclaimer">Results vary from person to person. The information on this website is for general awareness
-        and is not a substitute for a medical consultation.</p>
+
       <div class="wordmark" aria-hidden="true" data-parallax-x="0.25">Dr. Johar's</div>
+
+      <div class="ft-bottom">
+        <span>© <span id="yr"></span> Dr. Johar's Plastic Surgery Group. All rights reserved.</span>
+        <nav><a href="#">Disclaimer</a><a href="#">Privacy Policy</a><a href="#">Sitemap</a><a href="#">Careers</a></nav>
+        <a href="#" class="to-top" aria-label="Back to top"><svg><use href="#i-arrow" /></svg></a>
+      </div>
+      <p class="disclaimer">Results vary from person to person. The information on this website is for general awareness and is not a substitute for a medical consultation.</p>
     </div>
   </footer>
 
